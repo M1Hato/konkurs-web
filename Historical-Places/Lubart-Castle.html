@@ -3,45 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="../style/style.css">
+    <script src="../js/stylejs.js"></script>
     <title>Замок Любарта</title>
 </head>
 <body>
     <div class="header">
-        <ul class="nav-list">
-            <li>
-                <a class="nav-link-line" href="../index.html">Головна</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Kamianets-Podilsk-Fortress.html">Камʼянець-Подільська Фортеця</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Lubart-Castle.html">Замок Любарта</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Radomysl-Castle.html">Замок Радомисль</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="../Natural-Wonders/Askania-Nova.html">Асканія Нова</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="../Natural-Wonders/Dniester-Canyon.html">Дністерський Каньйон</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="../Natural-Wonders/Oleshkiv-sands.html">Олешківські піски</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="../about.html">Про нас</a>
-            </li>
-        </ul>   
+        <div class="theme">
+            <button class="button-slide" id="themeToggle">Змінити тему</button>
+        </div>
+        <div class="navdiv-list">
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-link-line" href="../index.html">Головна</a>
+                </li>
+                <li>
+                    <a class="nav-link-line" href="">Подорожжі</a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Kamianets-Podilsk-Fortress.html">Камʼянець-Подільська Фортеця</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Lubart-Castle.html">Замок Любарта</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Radomysl-Castle.html">Замок Радомисль</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="../Natural-Wonders/Askania-Nova.html">Асканія Нова</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="../Natural-Wonders/Dniester-Canyon.html">Дністерський Каньйон</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="../Natural-Wonders/Oleshkiv-sands.html">Олешківські піски</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>  
+                <li>
+                    <a class="nav-link-line" href="../about.html">Про нас</a>
+                </li>
+            </ul>  
+        </div>
+          
     </div>
     
-    <h1>Замок Любарта</h1>
-    <img height="300px" width="500px" src="../images/lubart castle.jpeg" alt="Lubart Castle">
-    <p>Луцький замок Любарта (Луцький замок, Верхній замок) - історична пам'ятка, розташована в місті Луцьк. Він був збудований у середині XIV століття князем Любартом, який правив на цих землях у 1340-х рр.</p>
-    <p>Замок був зведений на високому пагорбі, який був природним захистом від нападу ворогів. Він складався з кількох споруд, включно з вежами, стінами і палацами. Оточений глибокими ровами, він був майже неприступним.</p>
-    <p>Протягом своєї історії Луцький замок кілька разів змінював власників. Наприкінці XIV століття його захопив князь Вітовт, який зміцнив споруди та додав нові елементи. Пізніше замок переходив із рук у руки різних шляхетських родин, зокрема Острозьких, Сапєг і Радзивіллів.</p>
-    <p>1781 року замок був сильно пошкоджений пожежею, і протягом довгого часу залишався в зруйнованому стані. Однак на початку XX століття почалася реставрація, яка тривала до 1939 року.</p>
 
+    <div class="zamok">
+        <img height="300px" width="500px" src="../images/lubart castle.jpeg" alt="Lubart Castle">
+        <h1>Замок Любарта</h1>
+        <p>Луцький замок Любарта (Луцький замок, Верхній замок) - історична пам'ятка, розташована в місті Луцьк. Він був збудований у середині XIV століття князем Любартом, який правив на цих землях у 1340-х рр.</p>
+        <p>Замок був зведений на високому пагорбі, який був природним захистом від нападу ворогів. Він складався з кількох споруд, включно з вежами, стінами і палацами. Оточений глибокими ровами, він був майже неприступним.</p>
+        <p>Протягом своєї історії Луцький замок кілька разів змінював власників. Наприкінці XIV століття його захопив князь Вітовт, який зміцнив споруди та додав нові елементи. Пізніше замок переходив із рук у руки різних шляхетських родин, зокрема Острозьких, Сапєг і Радзивіллів.</p>
+        <p>1781 року замок був сильно пошкоджений пожежею, і протягом довгого часу залишався в зруйнованому стані. Однак на початку XX століття почалася реставрація, яка тривала до 1939 року.</p>
+    </div>
+    
 </body>
 </html>

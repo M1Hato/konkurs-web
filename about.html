@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="./style/style.css">
+    <script src="js/stylejs.js"></script>
+
     <title>Про сайт</title>
 </head>
 <body>
-    <div class="header">
-        <ul class="nav-list">
-            <li>
-                <a class="nav-link-line" href="./index.html">Головна</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Historical-Places/Kamianets-Podilsk-Fortress.html">Камʼянець-Подільська Фортеця</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Historical-Places/Lubart-Castle.html">Замок Любарта</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Historical-Places/Radomysl-Castle.html">Замок Радомисль</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Natural-Wonders/Askania-Nova.html">Асканія Нова</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Natural-Wonders/Dniester-Canyon.html">Дністерський Каньйон</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Natural-Wonders/Oleshkiv-sands.html">Олешківські піски</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./about.html">Про нас</a>
-            </li>
-        </ul>     
+     <div class="header">
+        <div class="navdiv-list">
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-link-line" href="./index.html">Головна</a>
+                </li>
+                <li>
+                    <a class="nav-link-line" href="">Подорожжі</a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Kamianets-Podilsk-Fortress.html">Камʼянець-Подільська Фортеця</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Lubart-Castle.html">Замок Любарта</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Radomysl-Castle.html">Замок Радомисль</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Natural-Wonders/Askania-Nova.html">Асканія Нова</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Natural-Wonders/Dniester-Canyon.html">Дністерський Каньйон</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Natural-Wonders/Oleshkiv-sands.html">Олешківські піски</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>  
+                <li>
+                    <a class="nav-link-line" href="./about.html">Про нас</a>
+                </li>
+            </ul>  
+        </div>
+          
     </div>
    
 
@@ -77,11 +93,17 @@
             </tr>
         </table>
 
-        <!-- <img width="700px" height="400px" src="./images/Ukraine.jpeg" alt="Beautiful photo"> -->
-        <p>Поле для фідбеку:</p>
-        <form action="">
+        <p>Поле для зворотнього звʼязку:</p>
+        <!-- <form action="">
             <input placeholder="Information" type="text">
             <button>Submit</button>
+        </form> -->
+
+        <form id="feedbackForm">
+            <label for="feedback">Ваше повідомлення:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+            <button type="submit" class="button">Надіслати</button>
         </form>
+        <div id="toast" class="toast"></div>
 </body>
 </html>

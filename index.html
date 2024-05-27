@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="js/stylejs.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
     <title>Natural-Wonders of Ukraine</title>
 </head>
 <body>
     <div class="header">
-        <ul class="nav-list">
-            <li>
-                <a class="nav-link-line" href="./index.html">Головна</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Historical-Places/Kamianets-Podilsk-Fortress.html">Камʼянець-Подільська Фортеця</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Historical-Places/Lubart-Castle.html">Замок Любарта</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Historical-Places/Radomysl-Castle.html">Замок Радомисль</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Natural-Wonders/Askania-Nova.html">Асканія Нова</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Natural-Wonders/Dniester-Canyon.html">Дністерський Каньйон</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./Natural-Wonders/Oleshkiv-sands.html">Олешківські піски</a>
-            </li>
-            <li>
-                <a class="nav-link-line" href="./about.html">Про нас</a>
-            </li>
-        </ul>    
+        <div class="theme">
+            <button class="button-slide" id="themeToggle">Змінити тему</button>
+        </div>
+        <div class="navdiv-list">
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-link-line" href="./index.html">Головна</a>
+                </li>
+                <li>
+                    <a class="nav-link-line" href="">Подорожжі</a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Kamianets-Podilsk-Fortress.html">Камʼянець-Подільська Фортеця</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Lubart-Castle.html">Замок Любарта</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Historical-Places/Radomysl-Castle.html">Замок Радомисль</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Natural-Wonders/Askania-Nova.html">Асканія Нова</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Natural-Wonders/Dniester-Canyon.html">Дністерський Каньйон</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-line" href="./Natural-Wonders/Oleshkiv-sands.html">Олешківські піски</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>  
+                <li>
+                    <a class="nav-link-line" href="./about.html">Про нас</a>
+                </li>
+            </ul>  
+        </div>
+          
     </div>
     
     <h1>Визначні місця України</h1>
@@ -54,6 +74,22 @@
     вражає своєю різноманітністю <em>ландшафтів</em> i <em>біорізноманіттям</em>
     </p>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/U3Bu-StctW8?si=B5WcRAem-IbwGBeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="slider">
+        <div class="slides">
+            <img src="images/Askaniya.jpeg" alt="Місце 1" class="slide">
+            <img src="images/dnister.jpeg" alt="Місце 2" class="slide">
+            <img src="images/zamok.jpeg" alt="Місце 3" class="slide">
+
+        </div>
+        <div class="controls">
+            <button class="button-slide" id="prev">❮</button>
+            <button class="button-slide" id="next">❯</button>
+        </div>
+    </div>
+</body>
+</html>
+    <div class="youvid">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/U3Bu-StctW8?si=B5WcRAem-IbwGBeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
