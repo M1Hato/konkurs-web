@@ -1,115 +1,65 @@
+html {
+    scroll-behavior: smooth; /* Плавне прокручування */
+}
+
 body{
     align-content: center;
     font-family:raleway, 'Courier New', Courier, sans-serif;
     background-color: #fffffe;
+    max-width: 100%;
+    margin: 0px;
 }
-
-body.dark-theme {
-    background-color: #232946;
-}
-
-body.dark-theme h1{
-    color: #fffffe;
-}
-body.dark-theme p{
-    color: #b8c1ec;
-}
-
-body.dark-theme button{
-    background-color: #eebbc3;
-    color: #232946;
-}
-
-body.dark-theme .header{
-    background-color: #121629;
-}
-body.dark-theme .submenu{
-    background-color: #a7b4f2;
-}
-
-table{
-    color: #2d334a;
-}
-
-body.dark-theme table{
-    color: #b8c1ec; 
-}
-
-body.dark-theme .nav-list{
-    color: #fffffe;
-}
-
-label{
-    color: #2d334a;
-}
-body.dark-theme label{
-    color: #b8c1ec;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
-}
-
-/* .submenu{
-    display: none;
-    padding: 0px;
-    position: absolute;
-    background-color: gray;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
-} */
-
-/* .submenu li{
-    list-style: none;
-}
-
-li:hover .submenu{
-    display: block;
-    opacity: 1;
-    max-height: 500px;
-
-} */
-
-.submenu {
-    visibility: hidden;
-    opacity: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    position: absolute;
-    background-color: gray;
-    padding: 0px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.submenu li {
-    list-style: none;
-}
-
-li:hover .submenu {
-    visibility: visible;
-    opacity: 1;
-    transform: scaleY(1);
-}
-
-
 
 .header{
-    display: flex;
-    height: 80px;
+    /* display: flex; */
+    /* height: 50px; */
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+    justify-content: center;
+    /* padding: 0 20px; */
     background-color: #bae8e8;
+   
+    /* @media (max-width: 768px) {
+        height: 75px;   
+        align-items: center;
+        justify-content: center;
+
+    } */
 }
 
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding-left: 30px;
+}
+
+.list-nav{
+    /* height: 40px; */
+    /* width: 600px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    margin: 0;
+    list-style: none;       
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Зміщення вниз для ефекту появи */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Коли секція стає видимою */
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Повертається на своє місце */
+}
+
+/* Стилі для target-section */
+#tiles-section {
+    transition: all 0.5s ease; /* Загальний перехід для плавності */
+}
 
 .nav-list{
     display: flex;
@@ -127,29 +77,79 @@ li:hover .submenu {
     display: flex;
     width: 100%; 
     margin-right: 10px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
-}
+    justify-content: center;
+    align-items: center;
+    
 
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 .nav-link-line:hover{
     color: cadetblue
 }
 
-div{
-    margin: 0 auto;
+.maintext{
+    width: 1100px;
+    line-height: 1.6;
+    text-align: justify;
+}
+.regforma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
-h1{
-    color: #272343;
+.parallax-container {
+    position: relative; /* Відносне позиціонування для внутрішніх елементів */
+    height: 100vh; /* Висота контейнера - 100% висоти вікна */
+    overflow: hidden;
 }
 
-p{
-    text-indent: 20px;
-    color: #2d334a;
+.parallax img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
+/* Контейнер для кнопки і тексту */
+.onbutton {
+    position: absolute; /* Абсолютне позиціонування поверх зображення */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрування по вертикалі та горизонталі */
+    text-align: center; /* Вирівнювання тексту по центру */
+    z-index: 1; /* Встановлення, щоб текст і кнопка були поверх зображення */
+}
+
+/* Стилі для кнопки */
+.btnhead {
+    font-size: 16px;
+    background-color: #79d1f7;
+    color: rgb(44, 43, 43);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.btnhead:hover {
+    background-color: #588cf3; /* Зміна кольору при наведенні */
+}
+
+/* Стилі для тексту привітання */
+.welcome-text {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px; /* Відступ між текстом і кнопкою */
+    font-family: 'Arial', sans-serif;
+}
 
 .youvid{
     display: grid;
@@ -157,30 +157,29 @@ p{
     margin-top: 50px;
 }
 
-.slider {
-    /* margin-top: 1rem; */
-    position: relative;
-    width: 600px;
-    height: 400px;
-    margin: auto;
-    overflow: hidden;
+.button{
+    background-color: #ffd803;
+    color: #272343;
+    padding: 1.2rem 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
 }
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+
+.regbtn{
+    background-color: #ffd803;
+    color: #272343;
+    padding: 1.2rem 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
 }
-.slide {
-    min-width: 100%;
-    height: 100%;
+.button:hover{
+    background-color: #dbbc09;
 }
-.controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
+
 .button-slide{
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -189,49 +188,315 @@ p{
     cursor: pointer;
 }
 
-.error {
-    border: 2px solid red;
+/* Контейнер для центризації контенту */
+.container {
+    width: 90%; /* Ширина контейнера відносно екрану */
+    max-width: 1000px; /* Максимальна ширина контейнера */
+    margin: 0 auto; /* Центрує контейнер по горизонталі */
 }
 
+/* Загальний стиль для блоків */
+.part-one {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box; 
+}
 
-.toast {
-    visibility: hidden;
-    position: fixed;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
+.part-one img {
+    max-width: 45%; 
+    height: auto;
+    margin-right: 20px; 
+}
+
+.part-one p {
+    max-width: 45%;
+}
+
+.part-one:nth-child(2) {
+    
+}
+
+.part-one:nth-child(2) img {
+    margin-left: 20px; /* Відступ для зображення зліва */
+    margin-right: 0; /* Прибираємо правий відступ */
+}
+
+/* Знову стандартний порядок для третього блоку */
+.part-one:nth-child(3) {
+    flex-direction: row; /* Зображення зліва, текст справа */
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-around; /* Вирівнює блоки в ряд */
+    flex-wrap: wrap; /* Дозволяє блокам переходити на новий рядок, якщо не вистачає місця */
+    gap: 20px; /* Відстань між блоками */
+    padding: 20px;
+}
+
+.info-box {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
     text-align: center;
-    padding: 16px;
-    border-radius: 8px;
-    z-index: 1;
-    transition: visibility 0s, opacity 0.5s linear;
-}
-.toast.show {
-    visibility: visible;
-    opacity: 1;
+    transition: all 0.3s ease;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
-textarea{
-    resize: none;
+.info-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #9c9898;
 }
 
-/* .button{
-    top: 50%;
-} */
-.button{
-    background-color: #ffd803;
-    color: #272343;
-    padding: 1.2rem 2rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    position: absolute;
-    cursor: pointer;
-    border: none;
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
-.button:hover{
-    background-color: #dbbc09;
+p {
+    font-size: 1.1em;
+    color: #555;
 }
 
+
+#infoblock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+ 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping of content if needed */
+    border: 2px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    max-width: 700px;
+    /* margin-right: 30px; */
+    /* width: 100%; */
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* overflow: hidden; */
+    word-wrap: break-word;
+}
+
+.block img {
+    max-width: 45%; /* Responsive max width for image */
+    max-height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents image from shrinking too much */
+}
+
+.block p {
+    margin: 0;
+    font-size: 18px;
+    max-width: 55%; /* Adjust width to balance with image */
+}
+
+.block.reverse {
+    flex-direction: row-reverse;
+}
+
+.block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.info-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    max-width: 1300px; /* Збільшуємо ширину блоку */
+    margin-top: 30px;
+    /* margin-left: 50px; */
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.info-block img {
+    max-width: 60%; /* Ширина зображення відносно контейнера */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 30px;
+    margin-right: 20px; /* Відстань між зображенням і текстом */
+}
+
+.text-content {
+    flex-grow: 1;
+    font-size: 18px;
+    line-height: 1.5;
+    word-wrap: break-word; /* Це дозволяє переносити текст на новий рядок */
+    /* word-break: break-all; */
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.text-content p {
+    margin: 0 0 10px;
+}
+
+
+
+
+/* Для планшетів */
+@media (max-width: 768px) {
+    .header {
+        align-items: center;
+    }
+    
+    .navdiv-list ul {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .nav-link-line {
+        padding: 10px 20px;
+    }
+
+    .submenu ul {
+        width: 100%;
+    }
+
+    .parallax-container {
+        height: 200px;
+    }
+
+    .controls {
+        display: none;
+    }
+
+
+    .tile {
+        width: 150px;
+        height: 150px;
+    }
+    .tile span {
+        font-size: 12px;
+    }
+
+    .button-slide {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .maintext {
+        width: 740px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .abouttext {
+        width: 740px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navdiv-list ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .maintext, .feedform {
+        padding: 10px;
+    }
+
+    .feedform textarea {
+        width: 100%;
+    }
+
+    .button-slide, .feedform .button {
+        width: 100%;
+        text-align: center;
+    }
+    .youvid {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Для мобільних пристроїв */
+@media (max-width: 480px) {
+    .theme button {
+        font-size: 14px;
+        padding: 5px;
+    }
+    
+    main {
+        padding: 10px;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+
+    .button-slide {
+        padding: 5px;
+    }
+
+    .youvid iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+
+    .tile {
+        width: 100px;
+        height: 100px;
+    }
+    .tile span {
+        font-size: 10px;
+    }
+    .button-slide {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .maintext {
+        width: 460px;
+    }
+
+    .abouttext {
+        width: 460px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .maintext h1 {
+        font-size: 24px;
+    }
+
+    .maintext p, .tableinf, .feedform {
+        font-size: 14px;
+    }
+
+    .youvid {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

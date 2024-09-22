@@ -1,95 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <link rel="stylesheet" href="./style/style.css">
-    <script src="js/stylejs.js"></script>
+    <link rel="stylesheet" href="./style/default.css">
+    <link rel="stylesheet" href="./style/tiles.css">
+   
+    <script src="js/slider.js"></script>
+
+    <meta name="description" content="Дізнайтеся про найвідоміші визначні місця України: від історичних пам'яток до природних чудес. Відкрийте для себе культурні скарби, захоплюючі пейзажі та туристичні атракції, які роблять Україну унікальною та незабутньою.">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
 
+
     <title>Natural-Wonders of Ukraine</title>
 </head>
 <body>
-    <div class="header">
-        <div class="theme">
-            <button class="button-slide" id="themeToggle">Змінити тему</button>
+    <header>
+        <div class="parallax-container">
+            <div class="parallax">
+                <img id="parallaxImage" height="400" width="300" src="./images/Tavria_effect-removebg-preview-2-2-2.png" 
+                     data-light-src="./images/Tavria_effect-removebg-preview-2-2-2.png" 
+                     data-dark-src="./images/Tavria_effect-removebg-preview-2-2-2.png" alt="">
+            </div>
+            <div class="onbutton">
+                <h1 class="welcome-text">Вітаємо на нашому сайті!</h1>
+                <button class="btnhead" onclick="scrollToSection()">Перейти</button>
+            </div>
         </div>
-        <div class="navdiv-list">
-            <ul class="nav-list">
-                <li>
-                    <a class="nav-link-line" href="./index.html">Головна</a>
-                </li>
-                <li>
-                    <a class="nav-link-line" href="">Подорожжі</a>
-                    <div class="submenu">
-                        <ul>
-                            <li>
-                                <a class="nav-link-line" href="./Historical-Places/Kamianets-Podilsk-Fortress.html">Камʼянець-Подільська Фортеця</a>
-                            </li>
-                            <li>
-                                <a class="nav-link-line" href="./Historical-Places/Lubart-Castle.html">Замок Любарта</a>
-                            </li>
-                            <li>
-                                <a class="nav-link-line" href="./Historical-Places/Radomysl-Castle.html">Замок Радомисль</a>
-                            </li>
-                            <li>
-                                <a class="nav-link-line" href="./Natural-Wonders/Askania-Nova.html">Асканія Нова</a>
-                            </li>
-                            <li>
-                                <a class="nav-link-line" href="./Natural-Wonders/Dniester-Canyon.html">Дністерський Каньйон</a>
-                            </li>
-                            <li>
-                                <a class="nav-link-line" href="./Natural-Wonders/Oleshkiv-sands.html">Олешківські піски</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>  
-                <li>
-                    <a class="nav-link-line" href="./about.html">Про нас</a>
-                </li>
-            </ul>  
-        </div>
-          
-    </div>
+    </header>
     
-    <h1>Визначні місця України</h1>
-    <p>
-        <b>У безмежній красі та глибині історії Україна розкриває свою ідентичність
-        через визначні місця, які стали національними символами та 
-        культурною спадщиною</b>
-        <br>
-        Україна - країна, що має безліч визначних місць і вражає своєю різноманітністю та культурним багатством.
-         Земля, населена людьми зі століть традиціями й відома своєю гостинністю, залюбки вітає гостей з усього світу.
-    </p>
-    <p>
-        Україна славиться своєю багатою історією, чим підтверджується численними історичними пам'ятками, які 
-        можна знайти в кожному куточку країни. Від давніх козацьких фортець до величних православних монастирів, кожен
-     камінь переносить у минуле і розповідає свою унікальну історію. <br><br>   
-    Крім історичних скарбів, Україна славиться своєю неповторною природою.
-    Від захоплюючих <b>Карпатських гір</b> до просторих <b>степів</b> на сході країни, Україна 
-    вражає своєю різноманітністю <em>ландшафтів</em> i <em>біорізноманіттям</em>
-    </p>
+<section id="tiles-section"  class="hidden">
+    <div class="header">
 
-    <div class="slider">
-        <div class="slides">
-            <img src="images/Askaniya.jpeg" alt="Місце 1" class="slide">
-            <img src="images/dnister.jpeg" alt="Місце 2" class="slide">
-            <img src="images/zamok.jpeg" alt="Місце 3" class="slide">
-
-        </div>
-        <div class="controls">
-            <button class="button-slide" id="prev">❮</button>
-            <button class="button-slide" id="next">❯</button>
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="/images/logo2.png" alt="" height="50" width="150">
+                        </a>
+                        
+                    </li>
+                   
+                </ul>
+                <ul class="list-nav">
+                    <li>
+                        <a href="./index.html">Вернутись на головну</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
-</body>
-</html>
-    <div class="youvid">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/U3Bu-StctW8?si=B5WcRAem-IbwGBeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!--Кнопки навігації-->
+    <h1>ЗАЗ Таврія</h1>
+    <div class="maintext">
+        <p>
+            ЗАЗ Таврія — малолітражний автомобіль, вироблений Запорізьким 
+            автомобілебудівним заводом (ЗАЗ) з 1988 по 2007 рік. Ця модель
+            була спроектована як економічний і доступний транспортний засіб 
+            для широкого кола користувачів, націлений на масовий ринок.
+        </p>
+        <p>
+            За роки виробництва Таврія набула значної популярності не тільки в Україні, 
+            але й у західних країнах, завдяки своїй простоті, 
+            надійності та низькій вартості обслуговування.
+        </p>
+        <h1><b>ЗАЗ Таврія сьогодні</b></h1>
+        <p>
+            Хоча виробництво автомобіля завершилось у 2007 році, 
+            Таврія й досі залишається на дорогах багатьох країн, особливо в Україні. 
+            Вона набула статусу культового автомобіля, який асоціюється з 
+            епохою розвитку вітчизняного автопрому. ЗАЗ Таврія залишається 
+            символом доступного транспорту та інженерного рішення свого 
+            часу, яке продовжує привертати увагу автолюбителів та колекціонерів.            
+        </p>
     </div>
+
+    <div class="tiles-container">
+        <div class="tile">
+            <a href="./Tavria-Information/Tavria-history.html">
+                <img src="./images/Tavria.jpg" alt="Камʼянець-Подільська Фортеця">
+                <span>Історія та розробка</span>
+            </a>
+        </div>
+        <div class="tile">
+            <a href="./Tavria-Information/engine-tavria.html">
+                <img src="./images/tavria-mix.jpg" alt="Замок Любарта">
+                <span>Дизайн і технічні характеристики</span>
+            </a>
+        </div>
+        <div class="tile">
+            <a href="./Tavria-Information/Tavria-realtime.html">
+                <img src="./images/tavria-in.jpeg" alt="Замок Радомисль">
+                <span>Можливий вигляд ЗАЗ Таврія</span>
+            </a>
+        </div>
+        <div class="tile">
+            <a href="./Tavria-Information/Tavria-in-sport.html">
+                <img src="./images/image_2024-09-1.png" alt="Асканія Нова">
+                <span>Таврія в спорті</span>
+            </a>
+        </div>
+
+        <img src="./images/TAVRIAGIF.gif" alt="">
+    </div>
+</section>
+
 </body>
 </html>

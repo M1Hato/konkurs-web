@@ -1,0 +1,42 @@
+div{
+    margin: 0 auto;
+}
+h1{
+    color: #272343;
+}
+h2{
+    color: #272343;
+    text-align: center;
+}
+p{
+    color: #2d334a;
+    /* text-align: justify; */
+}
+.block p{
+    /* text-align: justify; */
+    /* margin-right: 10px; */
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+label{
+    color: #2d334a;
+}
+textarea{
+    resize: none;
+}
+table{
+    color: #2d334a;
+}
+form {
+    width: 80%;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+h1{
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+.kamiantext{
+    width: 1100px;
+}
+
+.kamiantext .image-container {
+    text-align: center; /* Центрує вміст контейнера */
+    margin: 20px 0; /* Додає відступи зверху та знизу */
+}
+
+.kamiantext .image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.kamiantext h2{
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .kamiantext{
+        width: 740px;  
+    }
+
+}
+
+@media (max-width: 480px) {
+    .kamiantext{
+        width: 460px;  
+    }
+}

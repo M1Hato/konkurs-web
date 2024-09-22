@@ -1,0 +1,168 @@
+body{
+    align-content: center;
+    font-family:raleway, 'Courier New', Courier, sans-serif;
+    background-color: #fffffe;
+}
+
+.header {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #bae8e8;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 75px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.navdiv-list {
+    display: flex;
+    width: 100%;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .navdiv-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.nav-link-line:hover {
+    color: cadetblue;
+}
+
+table {
+    color: #2d334a;
+}
+
+.tableinf {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.feedform {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.abouttext {
+    width: 1100px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.error {
+    border: 2px solid red;
+}
+.toast {
+    visibility: hidden;
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    z-index: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* Для планшетів */
+@media (max-width: 768px) {
+
+    .abouttext {
+        width: 740px;
+    }
+
+    .tableinf{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .navdiv-list ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .maintext, .feedform {
+        padding: 10px;
+    }
+
+    .tableinf table, .feedform textarea {
+        width: 100%;
+    }
+
+    .button-slide, .feedform .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+
+    .abouttext {
+        width: 460px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .maintext h1 {
+        font-size: 24px;
+    }
+
+    .maintext p, .tableinf, .feedform {
+        font-size: 14px;
+    }
+}

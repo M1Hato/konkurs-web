@@ -1,0 +1,28 @@
+.askaniyatext{
+    width: 1100px;
+}
+
+.askaniyatext .img-container {
+    text-align: center; /* Центрує вміст контейнера */
+    margin: 20px 0; /* Додає відступи зверху та знизу */
+}
+
+.askaniyatext .img-container img {
+    max-width: 100%;
+    height: auto;
+}
+.askaniyatext h2{
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .askaniyatext{
+        width: 740px;  
+    }
+
+}
+
+@media (max-width: 480px) {
+    .askaniyatext{
+        width: 460px;  
+    }
+}
